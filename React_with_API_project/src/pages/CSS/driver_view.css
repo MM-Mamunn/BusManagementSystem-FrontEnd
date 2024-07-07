@@ -1,0 +1,24 @@
+table tr  td{
+    border:2px solid rgb(15, 14, 14);
+   
+}
+th{
+    border:2px solid rgb(15, 14, 14);
+    padding: 2px;
+}
+table{
+    
+    border-radius: 20px;
+}
+.whole{
+    border:2px solid rgb(115, 4, 4);
+    border-radius: 20px;
+}
+#root{
+    margin: 0;
+    padding: 0;
+}
+#navbar{
+    position: sticky;
+    top:0px;
+}
