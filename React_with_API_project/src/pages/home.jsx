@@ -5,7 +5,7 @@ export default function Home(){
     return(
         <>
         <Header/>
-        <body class="bg-gradient-to-br from-blue-400 to-green-300 min-h-screen flex flex-col items-center justify-center " 
+        <div class="bg-gradient-to-br from-blue-400 to-green-300 min-h-screen flex flex-col items-center justify-center " 
       style={{ backgroundImage: "url('https://images.pexels.com/photos/386009/pexels-photo-386009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')", minHeight:"110vh" }}> 
     <h1 class="text-3xl font-bold text-center mb-8 text-black-700 animate-bounce"> 
         <u class="no-underline inline-block animation fadeInOut">Bus Management System</u> 
@@ -47,7 +47,7 @@ export default function Home(){
 <footer style ={{position: "sticky" , top:"100vh", width:"100vw"}}>
       <Footer/>
       </footer>
-</body>
+</div>
 
 
       

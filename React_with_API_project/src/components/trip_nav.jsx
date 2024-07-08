@@ -10,7 +10,7 @@ export default function Tripheader() {
         <div className="flex space-x-6">
           <img className="w-16 h-12" src={tripImage} alt="Bus" />
           <NavLink
-            to="/trip_all"
+            to="/trips_home/trip_all"
             className={({ isActive }) =>
               isActive
                 ? 'text-black-200 bg-stone-400 mt-1 mb-1  rounded border-2 p-2  border-white font-bold'
@@ -20,17 +20,17 @@ export default function Tripheader() {
             Show Trip
           </NavLink>
           <NavLink
-            to="/search_trip"
+            to="/trips_home/search_trip"
             className={({ isActive }) =>
               isActive
                 ? 'text-black-200 bg-stone-400 mt-1 mb-1  rounded p-2  border-2 border-white font-bold'
                 : 'text-white-200 bg-red-400 mt-1 mb-1  rounded border-2  pl-2 pr-2 border-black  hover:text-blue-200'
             }
           >
-            Search Trip
+            Search Trips
           </NavLink>
           <NavLink
-            to="/count_trip"
+            to="/trips_home/count_trip"
             className={({ isActive }) =>
               isActive
                 ? 'text-black-200 bg-stone-400 mt-1 mb-1  rounded p-2  border-2 border-white font-bold'
@@ -40,7 +40,7 @@ export default function Tripheader() {
             Count Trips
           </NavLink>
           <NavLink
-            to="/trip_insert"
+            to="/trips_home/trip_insert"
             className={({ isActive }) =>
               isActive
                 ? 'text-black-200 bg-stone-400 mt-1 mb-1  rounded p-2  border-2 border-white font-bold'
@@ -60,7 +60,7 @@ export default function Tripheader() {
             Cancel Trip
           </NavLink>
         </div>
-        <a href ="/trips_home" style={{padding: "10px",width:"130px"}} class="bg-indigo-950 p-2  text-white hover:text-blue-200 rounded">
+        <a href ="//trips_home" style={{padding: "10px",width:"130px"}} class="bg-indigo-950 p-2  text-white hover:text-blue-200 rounded">
              Trips Home
             </a>
       </div>

@@ -3,7 +3,6 @@ import Header from "../components/nav";
 import axios from "axios";
 import "./CSS/main.css";
 import { useState } from "react";
-import { useEffect } from "react";
 import Tripheader from "../components/trip_nav";
 import Footer from "../components/footer";
 
@@ -22,7 +21,9 @@ function Count_trip() {
         // navigate("/Count_trip")
         console.log(res);
         setdrivers([]);
-        setdrivers(res.data.data.users);
+        // setdrivers(res.data.data.users);
+        if (res?.data?.data?.users) setdrivers(res.data.data.users);
+          else navigate(`/failed/${1}/${8}`); 
       })
       .catch((error) => {
         navigate("/failed");

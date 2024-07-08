@@ -9,7 +9,7 @@ function Search_trip() {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
-    navigate(`/search_trip/${data.driver_id}`);
+    navigate(`/trips_home/search_trip/${data.driver_id}`);
   };
 
   return (

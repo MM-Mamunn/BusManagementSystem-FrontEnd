@@ -15,10 +15,10 @@ function Trip_home() {
       style={{ minHeight:"100vh",backgroundImage: "url('https://images.pexels.com/photos/386009/pexels-photo-386009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" }}> 
     
      <ul id = "lists"  className="list-none list-disc ">
-  <li className="bg-green-500 text-white px-4 py-2 rounded m-2 "><a href="/trip_all" >Show All Trip</a></li>
-  <li className="bg-blue-500 text-white px-4 py-2 rounded m-2  "><a href="/search_trip" >Search Trip</a></li>
-  <li  className="bg-yellow-500 text-white px-4 py-2 rounded m-2 "><a href="/count_trip">Count Trips</a></li>
-  <li className="bg-red-500 text-white px-4 py-2 rounded m-2 "><a href="/trip_insert" >Insert New Trip</a></li>
+  <li className="bg-green-500 text-white px-4 py-2 rounded m-2 "><a href="/trips_home/trip_all" >Show All Trip</a></li>
+  <li className="bg-blue-500 text-white px-4 py-2 rounded m-2  "><a href="/trips_home/search_trip" >Search Trip</a></li>
+  <li  className="bg-yellow-500 text-white px-4 py-2 rounded m-2 "><a href="/trips_home/count_trip">Count Trips</a></li>
+  <li className="bg-red-500 text-white px-4 py-2 rounded m-2 "><a href="/trips_home/trip_insert" >Insert New Trip</a></li>
   <li className="bg-purple-500 text-white px-4 py-2 rounded m-2 "><a href="/coming_soon" >Cancel Trip</a></li>
 </ul>
 </body>

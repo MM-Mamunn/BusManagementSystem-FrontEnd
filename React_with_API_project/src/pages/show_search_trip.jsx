@@ -9,9 +9,9 @@ import Footer from "../components/footer";
 function Show_Search_Trip() {
   const [drivers, setdrivers] = useState([]);
   const navigate = useNavigate();
-  const { id } = useParams();
+  const  {id}  = useParams();
   useEffect(() => {
-    console.log(id);
+    // console.log(id);
     if (id)
       axios
         .get(`http://127.0.0.1:8000/api/search_trip?driver_id=${id}&limit=1000`)
@@ -20,10 +20,12 @@ function Show_Search_Trip() {
           console.log(res);
           setdrivers([]);
           if (res?.data?.data?.users) setdrivers(res.data.data.users);
-          else navigate("/failed");
+          else navigate(`/failed/${1}/${8}`); 
+          // navigate("/failed");
         })
         .catch((error) => {
-          navigate("/failed");
+          // navigate("/failed");
+          navigate(`/failed`);
         });
   }, [id]);
 
