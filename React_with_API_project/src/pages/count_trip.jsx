@@ -6,6 +6,25 @@ import { useState } from "react";
 import Tripheader from "../components/trip_nav";
 import Footer from "../components/footer";
 
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
 function Count_trip() {
   const [drivers, setdrivers] = useState([]);
   const navigate = useNavigate();
@@ -23,7 +42,7 @@ function Count_trip() {
         setdrivers([]);
         // setdrivers(res.data.data.users);
         if (res?.data?.data?.users) setdrivers(res.data.data.users);
-          else navigate(`/failed/${1}/${8}`); 
+        else navigate(`/failed/${1}/${8}`);
       })
       .catch((error) => {
         navigate("/failed");
@@ -46,23 +65,33 @@ function Count_trip() {
           minHeight: "110vh",
         }}
       >
-        <form
-          style={{ marginLeft: "575px", marginTop: "25vh" }}
-          id="Count Trip_box"
-          className="mt-2 w-1/2"
-          onSubmit={handleSubmit}
-        >
-          <input
-            type="text"
-            placeholder="driver_id"
-            id="driver_id"
-            name="driver_id"
-            required
-          />
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            Count Trip
-          </button>
-        </form>
+
+        {/* Shadcn  */}
+        <Card className="mt-2 w-[350px]">
+          {/* <form onSubmit={handleSubmit}> */}
+          <CardHeader>
+            <CardTitle>Enter Driver Id</CardTitle>
+            {/* <CardDescription>Deploy your new project in one-click.</CardDescription> */}
+          </CardHeader>
+          <CardContent>
+            <form onSubmit={handleSubmit}>
+              <div className="grid w-full items-center gap-4">
+                <div className="flex flex-col space-y-1.5">
+                  <Label htmlFor="name">Enter Driver Id</Label>
+                  <Input
+                    type="text"
+                    placeholder="Driver id"
+                    id="driver_id"
+                    name="driver_id"
+                    required
+                  />
+                </div>
+              </div>
+              <Button className="mt-2">Search</Button>
+            </form>
+          </CardContent>
+          {/* </form> */}
+        </Card>
 
         {drivers.length !== 0 && (
           <table className=" border-blue-500 rounded-sm mt-4 ">

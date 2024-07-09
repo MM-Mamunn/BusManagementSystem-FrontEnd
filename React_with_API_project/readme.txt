@@ -10,4 +10,4 @@ Now,run the "Final_project" project to localhost by the command "npm run dev"
 
 you're ready to use the.
 
-Need : pgAdmin,Django,React-vite,node.js 
+Need : pgAdmin,Django,React-vite,node.js, Shadchan UI (https://ui.shadcn.com/docs/installation/vite)  
