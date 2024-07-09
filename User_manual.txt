@@ -8,7 +8,7 @@ Guide:
 Create the tables and the necessary functions marked in ERD and the doc file using the sql code given in the "API(Database_part)".
 Now run this API(Database_part) project to localhost by the command "py manage.py runserver"
 
-or restore the database to your pgadmin from "database_copy" 
+or rename the "database_copy" to "database_copy.sql",then restore the database to your pgadmin from "database_copy".
 
 install node modules in final project
 Now,run the "Final_project" project to localhost by the command "npm run dev"
