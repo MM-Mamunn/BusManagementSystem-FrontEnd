@@ -5,8 +5,8 @@ export default function Home(){
     return(
         <>
         <Header/>
-        <div className="bg-cover  bg-center min-h-screen flex flex-col items-center justify-center " 
-      style={{ backgroundImage: "url('https://cdn3.vectorstock.com/i/1000x1000/44/67/bus-silhouette-on-a-dark-background-vector-31404467.jpg')", minHeight:"110vh"}}> 
+        <div className="-z-10  blur-md bg-[url('https://cdn3.vectorstock.com/i/1000x1000/44/67/bus-silhouette-on-a-dark-background-vector-31404467.jpg')] bg-cover bg-center  min-h-screen flex flex-col items-center justify-center p-0 absolute top-0 left-0 right-0 bottom-0"></div>
+        <div className="min-h-screen flex flex-col items-center justify-center " > 
     <h1 className="text-3xl font-bold text-center mb-8 text-white animate-bounce"> 
         <u className="no-underline inline-block animation fadeInOut">Bus Management System</u> 
     </h1> 
@@ -54,5 +54,3 @@ export default function Home(){
         </>
     )
 }
-
-

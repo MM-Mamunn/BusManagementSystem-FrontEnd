@@ -31,28 +31,38 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/drivers_home/driver_insert" element={<Driver_insert />} />
-            <Route path="/drivers_home/driver_update" element={<Driver_update />} />
-            <Route path="/trips_home/trip_insert" element={<Trip_insert />} />
+            <Route
+              path="/drivers_home/driver_insert"
+              element={<Driver_insert />}
+            />
+            <Route
+              path="/drivers_home/driver_update"
+              element={<Driver_update />}
+            />
             <Route path="/success" element={<Success />} />
             <Route path="/drivers_home/driver_view" element={<Driver_view />} />
             <Route path="/failed">
-            <Route path ="" element={<Failed/>}/>
-            <Route path =":id?/:id2?" element={<Failed/>}/>
+              <Route path="" element={<Failed />} />
+              <Route path=":id?/:id2?" element={<Failed />} />
             </Route>
             <Route path="/bus_view" element={<Bus_view />} />
             <Route path="/drivers_home" element={<Driver_home />} />
-            <Route path="/trips_home/search_trip">
-              <Route path="" element={<Search_trip />} />
-              <Route path=":id" element={<Show_Search_Trip />} />
-            </Route>
-            <Route path="/trips_home/count_trip">
-            <Route path="" element={<Count_trip />} />
-            <Route path=":id" element={<Show_count_payment />} />
-            </Route>
             {/* <Route path="/count_trip" element={<C />} /> */}
-            <Route path="/trips_home/trip_all" element={<Trip_all />} />
-            <Route path="/trips_home" element={<Trip_home />} />
+
+            <Route path="/trips_home">
+              <Route path="search_trip">
+                <Route path="" element={<Search_trip />} />
+                <Route path=":id" element={<Show_Search_Trip />} />
+              </Route>
+              <Route path="count_trip">
+                <Route path="" element={<Count_trip />} />
+                <Route path=":id" element={<Show_count_payment />} />
+              </Route>
+              <Route path="" element={<Trip_home />} />
+              <Route path="trip_insert" element={<Trip_insert />} />
+              <Route path="trip_all" element={<Trip_all />} />
+            </Route>
+
             <Route path="/bus_home" element={<Bus_home />} />
             <Route path="/about_us" element={<About_us />} />
             <Route path="/total_distance" element={<Bus_distance />} />

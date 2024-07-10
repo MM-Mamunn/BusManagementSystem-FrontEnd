@@ -112,7 +112,7 @@ function Count_trip() {
                   <td className="p-2 bg-green-200">{iterate?.license_no}</td>
                   <td className="p-2 bg-green-200">{iterate?.cnt}</td>
                   <td className="p-2 bg-green-200">
-                    <Link to={`/count_trip/${iterate.driver_id}`}>Payment</Link>
+                    <Link to={`/trips_home/count_trip/${iterate.driver_id}`}>Payment</Link>
                   </td>
                 </tr>
               ))}

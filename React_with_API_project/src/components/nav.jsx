@@ -5,7 +5,6 @@ import driverImage from "../pages/image/bus3.png";
 export default function Header() {
   return (
     <div
-     
     >
       <nav
         style={{ textShadow: "4px 4px 4px #0000ff", fontWeight: "40px" }}

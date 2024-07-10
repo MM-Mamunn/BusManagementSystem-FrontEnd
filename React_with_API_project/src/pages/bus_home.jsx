@@ -2,6 +2,10 @@ import Header from "../components/nav";
 import "./CSS/drivers_home.css";
 import Footer from "../components/footer";
 import Busheader from "../components/bus_nav";
+"use client"
+ 
+import { Checkbox } from "@/components/ui/checkbox"
+ 
 function Bus_home() {
   return (
     <>
@@ -24,7 +28,17 @@ function Bus_home() {
             <a href="/coming_soon">Update Bus</a>
           </li>
         </ul>
+{/* Shadcn */}
 
+<div style = {{border: '2px solid black', padding: '5px',borderRadius:'5px', boxShadow:'4px 4px 5px red'}}className="flex items-center space-x-2">
+      <Checkbox id="terms" />
+      <label
+        htmlFor="terms"
+        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+      >
+        Accept terms and conditions
+      </label>
+    </div>
         <footer style={{ position: "sticky", top: "100vh", width: "100vw" }}>
           <Footer />
         </footer>

@@ -17,7 +17,7 @@ function Trip_insert() {
         // console.log(res);
       })
       .catch((error) => {
-        navigate("/failed");
+        navigate(`/failed/${1}`);
       });
   };
   return (
