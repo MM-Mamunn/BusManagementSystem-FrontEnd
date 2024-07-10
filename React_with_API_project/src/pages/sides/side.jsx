@@ -26,6 +26,7 @@ function Side() {
           </li>
         </ul>
       </details>
+      
     </>
   );
 }

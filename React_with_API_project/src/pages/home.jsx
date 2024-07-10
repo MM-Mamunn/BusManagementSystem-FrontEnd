@@ -88,16 +88,16 @@ export default function Home() {
                   </p>
                 </a>
               </div>
-              <footer
-                style={{ position: "sticky", top: "100vh", width: "100vw" }}
-              >
-                <Footer />
-              </footer>
             </div>
           </div>
           <div className="bx3 box"></div>
         </div>
       </div>
+              <footer
+                style={{ position: "sticky", top: "100vh", width: "100vw" }}
+              >
+                <Footer />
+              </footer>
     </>
   );
 }

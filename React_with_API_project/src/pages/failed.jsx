@@ -24,9 +24,9 @@ console.log(id);
         
         {
           id.id2 ? (
-            <div id = "failed" style ={{backgroundColor:"orange"}}>No Data found</div>
+            <button className="btn btn-error">No data found</button>
           ) : (
-            <div id = "failed">Failed</div>
+            <button className="btn btn-error">Error</button>
           )
         }
         <footer style ={{position: "fixed" , top:"87vh", width:"100vw"}}>

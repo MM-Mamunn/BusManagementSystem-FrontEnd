@@ -1,10 +1,12 @@
 import axios from "axios";
-import Header from '../components/nav'
-import "./CSS/driver_view.css";
+import Header from "../components/nav";
+import "./CSS/main2.css";
 import { useState } from "react";
 import { useEffect } from "react";
-import Tripheader from '../components/trip_nav';
-import Footer from '../components/footer'
+import Tripheader from "../components/trip_nav";
+import Footer from "../components/footer";
+import Trip_side from "./sides/trip_side";
+import Side from "./sides/side";
 function Trip_all() {
   const [trips, setdrivers] = useState([]);
   useEffect(() => {
@@ -20,39 +22,74 @@ function Trip_all() {
   }, []);
   return (
     <>
-     <Header/>
-    <div style ={{position:"sticky", top: "0", left: "0"}}>
-     <Tripheader/>
-     </div>
-     <body class="bg-cover bg-bottom min-h-screen flex flex-col items-center  " 
-      style={{minHeight:"120vh", margin:"0",padding:"0",backgroundImage: "url('https://images.pexels.com/photos/386009/pexels-photo-386009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')", minHeight:"110vh" }}> 
+      <Header />
+      <div className="mainn " style={{ backgroundColor: "#2f2b51" }}>
+        <div className="containerr">
+          <div className="bx1 box">
+          <Side />
+          </div>
+          <div className="bx2 box">
+          <button style={{marginLeft:"400px"}}className="mt-2 btn btn-active">All Trips</button>
+            <div  className="overflow-x-auto">
+              <table  style={{ color:"white", marginTop:"5px", marginBottom:"5px"}} className="table">
+                {/* head */}
+                <thead >
+                  <tr>
+                    <th>Name And License</th>
+                    <th>Bus Id</th>
+                    <th>Route name</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* row 1 */}
+                  {trips?.map((iterate) => (
+                    <tr  key={iterate?.bus_id}>
+                      <td>
+                        <div className="flex items-center gap-3">
+                          <div className="avatar">
+                            <div className="mask mask-squircle h-12 w-12">
+                              <img
+                                src="https://img.daisyui.com/tailwind-css-component-profile-2@56w.png"
+                                alt="Avatar Tailwind CSS Component"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <div className="font-bold">{iterate?.name}</div>
+                            <div className="text-sm opacity-50">
+                              {iterate?.license_no}
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>{iterate?.bus_id}</td>
+                      <td>
+                        {iterate?.route_name}
+                        <br />
+                        {/* <span className="badge badge-ghost badge-sm">
+                      </span> */}
+                      </td>
+                      <th>
+                        <button className="btn btn-ghost btn-xs">
+                        {iterate?.date}
+                        </button>
+                      </th>
+                    </tr>
+                  ))}
+                </tbody>
+                {/* foot */}
+              </table>
+            </div>
 
-      <table  class=" border-blue-500 rounded-sm my-4">
-        <thead>
-          <tr>
-            <th class="p-2 bg-blue-200 ">Driver id</th>
-            <th class="p-2 bg-blue-200 ">Driver Name</th>
-            <th class="p-2 bg-blue-200">Bus id</th>
-            <th class="p-2 bg-blue-200">Date</th>
-            <th class="p-2 bg-blue-200">Route</th>
-          </tr>
-        </thead>
-        <tbody>
-          {trips?.map((iterate) => (
-            <tr key={iterate?.bus_id} class="hover:bg-blue-100">
-              <td class="p-2 bg-green-200">{iterate?.driver_id}</td>
-              <td class="p-2 bg-green-200">{iterate?.name}</td>
-              <td class="p-2 bg-green-200">{iterate?.bus_id}</td>
-              <td class="p-2 bg-green-200">{iterate?.date}</td>
-              <td class="p-2 bg-green-200">{iterate?.route_name}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+            {/* end of bx2 */}
+          </div>
+          <div className="bx3 box">  <Trip_side /></div>
+        </div>
+      </div>
       <footer style={{ position: "sticky", top: "100vh", width: "100vw" }}>
-          <Footer />
-        </footer>
-      </body>
+        <Footer />
+      </footer>
     </>
   );
 }

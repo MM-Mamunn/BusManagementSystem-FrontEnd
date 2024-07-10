@@ -5,7 +5,7 @@ export default function Success(){
     return(
         <>
         <Header/>
-        <div id = "success" >Successfull</div>
+        <button className="btn btn-outline btn-success">Success</button>
         <footer style ={{position: "fixed" , top:"87vh", width:"100vw"}}>
       <Footer/>
       </footer>
