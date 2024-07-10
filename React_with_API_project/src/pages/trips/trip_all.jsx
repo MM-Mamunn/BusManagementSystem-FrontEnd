@@ -30,7 +30,7 @@ function Trip_all() {
           </div>
           <div className="bx2 box">
             <button
-              style={{ marginLeft: "400px" }}
+              style={{ marginLeft: "450px" }}
               className="mt-2 btn btn-active"
             >
               All Trips

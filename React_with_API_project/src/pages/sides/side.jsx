@@ -13,7 +13,7 @@ function Side() {
         <summary className="side" style={{height:"30px"}}>
             Trips
         </summary>
-        <ul id="trip_side2" style={{ width: "300px" }}>
+        <ul id="trip_side2" style={{ width: "220px" }}>
           <li className="  px-4 py-2 rounded m-4 ">
             <Link to="/trips_home/trip_all">Show All Trip</Link>
           </li>
@@ -22,6 +22,9 @@ function Side() {
           </li>
           <li className="  px-4 py-2 rounded m-4 ">
             <Link to="/trips_home/count_trip">Count Trips</Link>
+          </li>
+          <li className="  px-4 py-2 rounded m-4 ">
+            <Link to="/trips_home/payment">Count Payment</Link>
           </li>
           <li className="  px-4 py-2 rounded m-4 ">
             <Link to="/trips_home/trip_insert">Insert New Trip</Link>
@@ -36,7 +39,7 @@ function Side() {
         <summary className="side" style={{height:"30px"}}>
             Drivers
         </summary>
-        <ul id="trip_side2" style={{ width: "300px" }}>
+        <ul id="trip_side2" style={{ width: "220px" }}>
           <li className="  px-4 py-2 rounded m-4 ">
             <Link to="/drivers_home/driver_insert">Insert Driver</Link>
           </li>
@@ -56,7 +59,7 @@ function Side() {
         <summary className="side" style={{height:"30px"}}>
             Buses
         </summary>
-        <ul id="trip_side2" style={{ width: "300px" }}>
+        <ul id="trip_side2" style={{ width: "220px" }}>
           <li className="  px-4 py-2 rounded m-4 ">
             <Link to="/drivers_home/driver_insert">Insert Driver</Link>
           </li>
@@ -76,7 +79,7 @@ function Side() {
         <summary className="side" style={{height:"30px"}}>
             Maintanance
         </summary>
-        <ul id="trip_side2" style={{ width: "300px" }}>
+        <ul id="trip_side2" style={{ width: "220px" }}>
           <li className="  px-4 py-2 rounded m-4 ">
             <Link to="/drivers_home/driver_insert">Insert Driver</Link>
           </li>

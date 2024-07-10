@@ -22,6 +22,7 @@ import Driver_update from "./pages/driver_update";
 import Show_Search_Trip from "./pages/trips/show_search_trip";
 import Show_count_payment from "./pages/trips/show_count_payment";
 import Show_count_trip from "./pages/trips/show_count_trip";
+import Count_payment from "./pages/trips/count_payment";
 
 //import  './driver_insert.jsx';
 function App() {
@@ -51,6 +52,7 @@ function App() {
             {/* <Route path="/count_trip" element={<C />} /> */}
 
             <Route path="/trips_home">
+
               <Route path="search_trip">
                 <Route path="" element={<Search_trip />} />
                 <Route path=":id" element={<Show_Search_Trip />} />
@@ -58,8 +60,11 @@ function App() {
               <Route path="count_trip">
                 <Route path="" element={<Count_trip />} />
                 <Route path=":id" element={<Show_count_trip />} />
-                <Route path="payment/:id" element={<Show_count_payment />} />
               </Route>
+                <Route path="payment">
+                <Route path="" element={<Count_payment />} />
+                <Route path=":id" element={<Show_count_payment />} />
+                </Route>
               <Route path="" element={<Trip_home />} />
               <Route path="trip_insert" element={<Trip_insert />} />
               <Route path="trip_all" element={<Trip_all />} />

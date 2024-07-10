@@ -42,7 +42,7 @@ function Show_count_trip() {
           </div>
           <div className="bx2 box">
             <button
-              style={{ marginLeft: "400px" }}
+              style={{ marginLeft: "480px" }}
               className="mt-2 btn btn-active"
             >
               Trips Count 
@@ -95,7 +95,7 @@ function Show_count_trip() {
                     </td>
                     <td>
                       <Link
-                        to={`/trips_home/count_trip/payment/${iterate.driver_id}`}
+                        to={`/trips_home/payment/${iterate.driver_id}`}
                       >
                         Payment
                       </Link>

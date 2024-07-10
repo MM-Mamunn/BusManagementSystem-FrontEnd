@@ -9,7 +9,7 @@ export default function Header() {
       <div className="navbar bg-base-100">
         <div className="flex-1">
           <a style={{ color: "grey" }} className="btn text-xl">
-            daisyUI
+            Bus Management
           </a>
         </div>
         <div className="flex-none">

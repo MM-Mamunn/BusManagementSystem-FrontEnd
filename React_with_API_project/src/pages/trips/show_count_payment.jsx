@@ -5,6 +5,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Tripheader from "../../components/trip_nav";
 import Footer from "../../components/footer";
+import Trip_side from "../sides/trip_side";
+import Side from "../sides/side";
 
 function Show_count_payment() {
   const [drivers, setdrivers] = useState([]);
@@ -31,47 +33,79 @@ function Show_count_payment() {
   return (
     <>
       <Header />
-      <div style={{ position: "sticky", top: "0", left: "0" }}>
-        <Tripheader />
-      </div>
-      <body
-        class="bg-gradient-to-br from-blue-400 to-green-300 min-h-screen flex flex-col items-center  "
-        style={{
-          minHeight: "120vh",
-          margin: "0",
-          padding: "0",
-          backgroundImage:
-            "url('https://images.pexels.com/photos/386009/pexels-photo-386009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
-          minHeight: "110vh",
-          backgroundSize: "cover",
-          backgroundPosition: "bottom",
-        }}
-      >
-        {drivers.length !== 0 && (
+      {/* <Tripheader /> */}
+      <div className="mainn " style={{ backgroundColor: "#2f2b51" }}>
+        <div className="containerr">
+          <div className="bx1 box">
+            <Side />
+          </div>
+          <div className="bx2 box">
+          <button
+              style={{ marginLeft: "480px" }}
+              className="mt-2 btn btn-active"
+            >
+              Payment
+            </button>
           <table
-            style={{ marginLeft: "0vw", width: "26vw" }}
-            className=" border-blue-500 rounded-sm  mt-4 "
-          >
-            <thead>
-              <tr>
-                <th className="p-2 bg-blue-200 ">Driver id</th>
-                <th className="p-2 bg-blue-200">Payment</th>
-              </tr>
-            </thead>
-            <tbody>
-              {drivers?.map((iterate, i) => (
-                <tr key={i} className="hover:bg-blue-100">
-                  <td className="p-2 bg-green-200">{iterate?.driver_id}</td>
-                  <td className="p-2 bg-green-200">{iterate?.sum}</td>
+              style={{
+                color: "white",
+                marginTop: "5px",
+                marginBottom: "5px",
+              }}
+              className="table"
+            >
+              {/* head */}
+              <thead>
+                <tr>
+                  <th>Driver Id</th>
+                  <th>Payment</th>
+                  {/* <th>Route name</th>
+                  <th>Date</th> */}
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        )}
-        <footer style={{ position: "sticky", top: "100vh", width: "100vw" }}>
-          <Footer />
-        </footer>
-      </body>
+              </thead>
+              <tbody>
+                {/* row 1 */}
+                {drivers?.map((iterate, i) => (
+                  <tr key={i}>
+                    {/* <td>
+                      <div className="flex items-center gap-3">
+                        <div className="avatar">
+                          <div className="mask mask-squircle h-12 w-12">
+                            <img
+                              src="https://img.daisyui.com/tailwind-css-component-profile-2@56w.png"
+                              alt="Avatar Tailwind CSS Component"
+                            />
+                          </div>
+                        </div>
+                        <div>
+                          <div className="font-bold">{iterate?.name}</div>
+                          <div className="text-sm opacity-50">
+                            {iterate?.license_no}
+                          </div>
+                        </div>
+                      </div>
+                    </td> */}
+                    <td>{iterate?.driver_id}</td>
+                    <td>
+                      {iterate?.sum}
+                      <br />
+                      {/* <span className="badge badge-ghost badge-sm">
+                      </span> */}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+              {/* foot */}
+            </table>
+          </div>
+          <div className="bx3 box">
+            <Trip_side />
+          </div>
+        </div>
+      </div>
+      <footer style={{ position: "sticky", top: "100vh", width: "100vw" }}>
+        <Footer />
+      </footer>
     </>
   );
 }
