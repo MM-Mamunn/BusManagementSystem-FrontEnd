@@ -1,7 +1,7 @@
 import Header from "../components/nav";
 import Footer from "../components/footer";
 import "./CSS/main2.css";
-import Trip_side from "./sides/trip_side";
+import Side from "./sides/side";
 export default function Home() {
   return (
     <>
@@ -9,7 +9,7 @@ export default function Home() {
       <div className="mainn " style={{ backgroundColor: "#2f2b51" }}>
         <div className="containerr">
           <div className="bx1 box">
-            <Trip_side />
+            <Side />
           </div>
           <div className="bx2 box">
             <div className="min-h-screen flex flex-col items-center justify-center ">

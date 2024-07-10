@@ -1,4 +1,6 @@
+
 .containerr{
+    
     min-height:100vh;
     display:flex;
     width: 99vw;
@@ -6,6 +8,7 @@
     /* border:5px solid black; */
    margin:auto;
    justify-content: space-between;
+
 }
 .box{
     /* border:1px solid black; */
@@ -17,6 +20,7 @@
 }
 .bx2{
     width:58vw;
+   
 }
 .bx3{
     width:20vw;
