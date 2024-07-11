@@ -48,12 +48,11 @@
 #trip_side2{
     box-shadow: 2px 2px 6px rgb(0, 0, 87);
 }
-/* table tr td thead{
-    border-color: grey;
-} */
-/* 
-#trip_table tr td thead{
-    border-style: none;
-    border: 0px;
-    background-color: red;
-} */
+
+.having{
+    display: flex;
+    align-items: center;
+    max-width: 68vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

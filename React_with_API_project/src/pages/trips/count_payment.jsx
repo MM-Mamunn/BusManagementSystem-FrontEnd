@@ -45,7 +45,7 @@ function Count_payment() {
           </div>
           <div className="bx2 box">
             {/* Shadcn  */}
-            <Card style={{marginLeft:"20vw", backgroundColor:"#48597f"}}className=" mt-2 w-[350px]">
+            <Card style={{marginLeft:"20vw", backgroundColor:"#48597f"}} className=" mt-2 w-[350px]">
               {/* <form onSubmit={handleSubmit}> */}
               <CardHeader>
                 <CardTitle>Enter Driver Id</CardTitle>

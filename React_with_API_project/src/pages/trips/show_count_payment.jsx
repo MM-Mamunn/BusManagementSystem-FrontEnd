@@ -23,7 +23,7 @@ function Show_count_payment() {
           console.log(res?.data?.data?.users);
           setdrivers([]);
           if (res?.data?.data?.users) setdrivers(res.data.data.users);
-          else alert(`No data found for driver id ${id}, Please go back to count again`);;
+          else alert(`No Trip/payment found for driver id ${id}, Please go back to count again`);;
         })
         .catch((error) => {
           alert("An error occured")

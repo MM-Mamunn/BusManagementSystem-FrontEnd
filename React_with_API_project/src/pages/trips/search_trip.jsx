@@ -47,8 +47,7 @@ function Search_trip() {
       .get("http://127.0.0.1:8000/api/driver_view?limit=1000")
       .then((res) => {
         setdrivers(res?.data?.data?.users);
-        // console.log(res);
-        // console.log(drivers);
+
       })
       .catch((error) => {
         alert("An error occured")

@@ -63,7 +63,7 @@ function Show_count_trip() {
                   <th>Name And License</th>
                   <th>Bus Id</th>
                   <th>Route name</th>
-                  <th>Date</th>
+                  <th>Payment</th>
                 </tr>
               </thead>
               <tbody>
@@ -99,7 +99,7 @@ function Show_count_trip() {
                       <Link
                         to={`/trips_home/payment/${iterate.driver_id}`}
                       >
-                        Payment
+                        <button className="btn btn-active btn-accent">payment</button>
                       </Link>
                     </td>
                   </tr>

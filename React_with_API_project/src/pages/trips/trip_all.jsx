@@ -92,6 +92,8 @@ function Trip_all() {
                 </tbody>
                 {/* foot */}
               </table>
+
+              
             </div>
 
             {/* end of bx2 */}
