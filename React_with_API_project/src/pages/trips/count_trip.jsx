@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Header from "../../components/nav";
 import axios from "axios";
 import "../CSS/main.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Tripheader from "../../components/trip_nav";
 import Footer from "../../components/footer";
 
@@ -33,8 +33,28 @@ function Count_trip() {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
-    navigate(`/trips_home/count_trip/${data.driver_id}`);
+    for(let i = 0 ; i < drivers.length;i++) {
+      if(drivers[i].driver_id == data.driver_id) {
+        navigate(`/trips_home/count_trip/${data.driver_id}`);
+        return;
+      }
+    }
+    alert(`Driver with "${data.driver_id}" does not exist.Select Correct Driver id`);
   };
+  const [drivers, setdrivers] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:8000/api/driver_view?limit=1000")
+      .then((res) => {
+        setdrivers(res?.data?.data?.users);
+        // console.log(res);
+        // console.log(drivers);
+      })
+      .catch((error) => {
+        alert("An error occured")
+      });
+  }, []);
+
 
   return (
     <>

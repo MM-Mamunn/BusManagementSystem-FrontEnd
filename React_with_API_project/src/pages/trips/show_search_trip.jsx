@@ -22,12 +22,12 @@ function Show_Search_Trip() {
           console.log(res);
           setdrivers([]);
           if (res?.data?.data?.users) setdrivers(res.data.data.users);
-          else navigate(`/failed/${1}/${8}`);
-          // navigate("/failed");
+          else alert(`No Trip yet by driver id "${id}", Please go back to search again`);
+          //  navigate(`/failed/${1}/${8}`);
         })
         .catch((error) => {
+          alert("Error occured");
           // navigate("/failed");
-          navigate(`/failed`);
         });
   }, [id]);
 
