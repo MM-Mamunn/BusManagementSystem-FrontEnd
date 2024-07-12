@@ -1,4 +1,4 @@
-import axios from "axios";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/home";
@@ -12,7 +12,6 @@ import Driver_home from "./pages/driver/drivers_home";
 import Trip_home from "./pages/trips/trips_home";
 import Search_trip from "./pages/trips/search_trip";
 import Trip_all from "./pages/trips/trip_all";
-import Bus_home from "./pages/bus_home";
 import Count_trip from "./pages/trips/count_trip";
 import About_us from "./pages/about_us";
 import Bus_distance from "./pages/bus_distance";
@@ -23,6 +22,9 @@ import Show_Search_Trip from "./pages/trips/show_search_trip";
 import Show_count_payment from "./pages/trips/show_count_payment";
 import Show_count_trip from "./pages/trips/show_count_trip";
 import Count_payment from "./pages/trips/count_payment";
+import Oil_count from "./pages/bus/oil_count";
+import Oil_countt from "./pages/bus/oil_countt";
+import Bus_home from "./pages/bus/bus_home";
 
 //import  './driver_insert.jsx';
 function App() {
@@ -33,22 +35,29 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
-          
+
             <Route path="/success" element={<Success />} />
-            
+
             <Route path="/failed">
               <Route path="" element={<Failed />} />
               <Route path=":id?/:id2?" element={<Failed />} />
             </Route>
-            <Route path="/bus_view" element={<Bus_view />} />
 
-            <Route path="/drivers_home" > 
-            <Route path = "" element={<Driver_home />}/>
-            <Route path="driver_view" element={<Driver_view />} />
-            <Route path="driver_insert" element={<Driver_insert />} />
-            <Route path="driver_update" element={<Driver_update />} />
+            <Route path="/bus_home">
+              <Route path="" element={<Bus_home />} />
+              <Route path="oil_countt">
+                <Route path="" element={<Oil_countt />} />
+                <Route path=":id1?/:id2?" element={<Oil_count />} />
+              </Route>
+              <Route path="bus_view" element={<Bus_view />} />
             </Route>
-            
+
+            <Route path="/drivers_home">
+              <Route path="" element={<Driver_home />} />
+              <Route path="driver_view" element={<Driver_view />} />
+              <Route path="driver_insert" element={<Driver_insert />} />
+              <Route path="driver_update" element={<Driver_update />} />
+            </Route>
 
             <Route path="/trips_home">
               <Route path="search_trip">
