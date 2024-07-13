@@ -20,18 +20,6 @@ function Bus_side() {
      All Buses
               </NavLink>
   </li>
-  <li className="  px-1 py-1 rounded m-4 ">
-  <NavLink
-                to="/bus_home/total_distance"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-white bg-blue-300 mt-1 mb-1  rounded  p-1   font-bold"
-                    : ""
-                }
-              >
-      Count_distance
-              </NavLink>
-  </li>
   <li className="  px-4 py-1 rounded m-4 ">
   <NavLink
                 to="/bus_home/bus_delete"
@@ -46,18 +34,6 @@ function Bus_side() {
   </li>
   <li className="  px-4 py-1 rounded m-4 ">
   <NavLink
-                to="/coming_soon"
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-white bg-blue-300 mt-1 mb-1  rounded  p-2   font-bold"
-                    : ""
-                }
-              >
-      Update Bus
-              </NavLink>
-  </li>
-  <li className="  px-4 py-1 rounded m-4 ">
-  <NavLink
                 to="/bus_home/oil_countt"
                 className={({ isActive }) =>
                   isActive
@@ -66,6 +42,30 @@ function Bus_side() {
                 }
               >
       Count Consumed Oil
+              </NavLink>
+  </li>
+  <li className="  px-1 py-1 rounded m-4 ">
+  <NavLink
+                to="/bus_home/total_distance"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-white bg-blue-300 mt-1 mb-1  rounded  p-1   font-bold"
+                    : ""
+                }
+              >
+      Count distance
+              </NavLink>
+  </li>
+  <li className="  px-4 py-1 rounded m-4 ">
+  <NavLink
+                to="/coming_soon"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-white bg-blue-300 mt-1 mb-1  rounded  p-2   font-bold"
+                    : ""
+                }
+              >
+      Update Bus
               </NavLink>
   </li>
 </ul>

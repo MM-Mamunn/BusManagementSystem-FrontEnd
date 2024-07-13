@@ -68,7 +68,7 @@ function Trip_side() {
     Insert New Trip
               </NavLink>
   </li>
-  <li className="  px-4 py-1 rounded m-4 ">
+  {/* <li className="  px-4 py-1 rounded m-4 ">
   <NavLink
                 to="/coming_soon"
                 className={({ isActive }) =>
@@ -79,7 +79,7 @@ function Trip_side() {
               >
     Cancel Trip
               </NavLink>
-  </li>
+  </li> */}
 </ul>
 </div>
     </>

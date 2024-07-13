@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/home";
@@ -6,7 +5,7 @@ import Driver_insert from "./pages/driver/driver_insert";
 import Trip_insert from "./pages/trips/trip_insert";
 import Success from "./pages/success";
 import Driver_view from "./pages/driver/driver_view";
-import Bus_view from "./pages/bus_view";
+import Bus_view from "./pages/bus/bus_view";
 import Failed from "./pages/failed";
 import Driver_home from "./pages/driver/drivers_home";
 import Trip_home from "./pages/trips/trips_home";
@@ -15,7 +14,7 @@ import Trip_all from "./pages/trips/trip_all";
 import Count_trip from "./pages/trips/count_trip";
 import About_us from "./pages/about_us";
 import Bus_distance from "./pages/bus_distance";
-import Bus_delete from "./pages/bus_delete";
+import Bus_delete from "./pages/bus/bus_delete";
 import Coming_soon from "./pages/coming_soon";
 import Driver_update from "./pages/driver/driver_update";
 import Show_Search_Trip from "./pages/trips/show_search_trip";
@@ -25,6 +24,8 @@ import Count_payment from "./pages/trips/count_payment";
 import Oil_count from "./pages/bus/oil_count";
 import Oil_countt from "./pages/bus/oil_countt";
 import Bus_home from "./pages/bus/bus_home";
+import Search_driver from "./pages/driver/search_driver";
+import Show_search_driver from "./pages/driver/show_search_driver";
 
 //import  './driver_insert.jsx';
 function App() {
@@ -50,6 +51,8 @@ function App() {
                 <Route path=":id1?/:id2?" element={<Oil_count />} />
               </Route>
               <Route path="bus_view" element={<Bus_view />} />
+              <Route path="total_distance" element={<Bus_distance />} />
+              <Route path="bus_delete" element={<Bus_delete />} />
             </Route>
 
             <Route path="/drivers_home">
@@ -57,6 +60,10 @@ function App() {
               <Route path="driver_view" element={<Driver_view />} />
               <Route path="driver_insert" element={<Driver_insert />} />
               <Route path="driver_update" element={<Driver_update />} />
+              <Route path="search_driver">
+                <Route path="" element={<Search_driver />} />
+                <Route path=":id" element={<Show_search_driver />} />
+              </Route>
             </Route>
 
             <Route path="/trips_home">
@@ -79,8 +86,6 @@ function App() {
 
             <Route path="/bus_home" element={<Bus_home />} />
             <Route path="/about_us" element={<About_us />} />
-            <Route path="/total_distance" element={<Bus_distance />} />
-            <Route path="/bus_delete" element={<Bus_delete />} />
             <Route path="/coming_soon" element={<Coming_soon />} />
           </Routes>
         </BrowserRouter>

@@ -10,7 +10,7 @@ function Driver_side() {
      <ul id= "trip_side" >
   <li className="  px-4 py-1 rounded m-4 ">
   <NavLink
-                to="drivers_home/driver_insert"
+                to="/drivers_home/driver_insert"
                 className={({ isActive }) =>
                   isActive
                     ? "text-white bg-blue-300 mt-1 mb-1  rounded  p-2   font-bold"
@@ -34,7 +34,7 @@ function Driver_side() {
   </li>
   <li className="  px-4 py-1 rounded m-4 ">
   <NavLink
-                to="/coming_soon"
+                to="/drivers_home/driver_update"
                 className={({ isActive }) =>
                   isActive
                     ? "text-white bg-blue-300 mt-1 mb-1  rounded  p-2   font-bold"
@@ -46,7 +46,7 @@ function Driver_side() {
   </li>
   <li className="  px-4 py-1 rounded m-4 ">
   <NavLink
-                to="/coming_soon"
+                to="/drivers_home/search_driver"
                 className={({ isActive }) =>
                   isActive
                     ? "text-white bg-blue-300 mt-1 mb-1  rounded  p-2   font-bold"

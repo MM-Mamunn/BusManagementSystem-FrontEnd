@@ -29,9 +29,9 @@ function Side() {
           <li className="  px-4 py-2 rounded m-4 ">
             <Link to="/trips_home/trip_insert">Insert New Trip</Link>
           </li>
-          <li className="  px-4 py-2 rounded m-4 ">
+          {/* <li className="  px-4 py-2 rounded m-4 ">
             <Link to="/coming_soon">Cancel Trip</Link>
-          </li>
+          </li> */}
         </ul>
       </details>
      {/* driver  */}
@@ -47,10 +47,10 @@ function Side() {
             <Link to="/drivers_home/driver_view">Show All Driver</Link>
           </li>
           <li className="  px-4 py-2 rounded m-4 ">
-            <Link to="/coming_soon">Update Driver</Link>
+            <Link to="/drivers_home/driver_update">Update Driver</Link>
           </li>
           <li className="  px-4 py-2 rounded m-4 ">
-            <Link to="/coming_soon">Search Driver</Link>
+            <Link to="/drivers_home/search_driver">Search Driver</Link>
           </li>
         </ul>
       </details>
@@ -67,10 +67,10 @@ function Side() {
             <Link to="/drivers_home/driver_view">Show All Driver</Link>
           </li>
           <li className="  px-4 py-2 rounded m-4 ">
-            <Link to="/coming_soon">Update Driver</Link>
+            <Link to="/drivers_home/driver_update">Update Driver</Link>
           </li>
           <li className="  px-4 py-2 rounded m-4 ">
-            <Link to="/coming_soon">Search Driver</Link>
+            <Link to="/drivers_home/search_driver">Search Driver</Link>
           </li>
         </ul>
       </details>
@@ -90,7 +90,7 @@ function Side() {
             <Link to="/coming_soon">Update Driver</Link>
           </li>
           <li className="  px-4 py-2 rounded m-4 ">
-            <Link to="/coming_soon">Search Driver</Link>
+            <Link to="/drivers_home/search_driver">Search Driver</Link>
           </li>
         </ul>
       </details>
