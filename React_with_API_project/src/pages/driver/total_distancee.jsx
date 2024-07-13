@@ -6,7 +6,6 @@ import { useEffect } from "react";
 import Footer from "../../components/footer";
 import Side from "../sides/side";
 import { useParams } from "react-router-dom";
-import Bus_side from "../sides/bus_side";
 import Driver_side from "../sides/driver_side";
 function Total_distancee() {
   const id = useParams();

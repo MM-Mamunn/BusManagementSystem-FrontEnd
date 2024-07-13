@@ -1,7 +1,6 @@
 
 import { Link, NavLink } from "react-router-dom";
 import "../CSS/main2.css";
-import Maintanance_home from "../maintanance/maintanance_home";
 function Maintanance_side() {
   return (
     <>

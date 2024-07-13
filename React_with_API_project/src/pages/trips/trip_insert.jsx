@@ -1,14 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import Header from "../../components/nav";
-import Tripheader from "../../components/trip_nav";
 import axios from "axios";
 import Footer from "../../components/footer";
 import { useEffect, useState } from "react";
 import Side from "../sides/side";
 import Trip_side from "../sides/trip_side";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Label } from "@radix-ui/react-label";
-import { Input } from "postcss";
 import { Button } from "@/components/ui/button";
 
 function Trip_insert() {

@@ -1,8 +1,6 @@
 import "../CSS/drivers_home.css";
 import Header from "../../components/nav";
-import Driverheader from "../../components/driver_nav";
 import Footer from "../../components/footer";
-import { Link, useNavigate } from "react-router-dom";
 import Driver_side from "../sides/driver_side";
 import Side from "../sides/side";
 function Driver_home() {

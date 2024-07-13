@@ -3,7 +3,6 @@ import Header from "../../components/nav";
 import "../CSS/main2.css";
 import { useState } from "react";
 import { useEffect } from "react";
-import Tripheader from "../../components/trip_nav";
 import Footer from "../../components/footer";
 import Trip_side from "../sides/trip_side";
 import Side from "../sides/side";

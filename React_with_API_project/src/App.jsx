@@ -3,10 +3,8 @@ import "./App.css";
 import Home from "./pages/home";
 import Driver_insert from "./pages/driver/driver_insert";
 import Trip_insert from "./pages/trips/trip_insert";
-import Success from "./pages/success";
 import Driver_view from "./pages/driver/driver_view";
 import Bus_view from "./pages/bus/bus_view";
-import Failed from "./pages/failed";
 import Driver_home from "./pages/driver/drivers_home";
 import Trip_home from "./pages/trips/trips_home";
 import Search_trip from "./pages/trips/search_trip";
@@ -14,7 +12,7 @@ import Trip_all from "./pages/trips/trip_all";
 import Count_trip from "./pages/trips/count_trip";
 import About_us from "./pages/about_us";
 import Bus_delete from "./pages/bus/bus_delete";
-import Coming_soon from "./pages/coming_soon";
+// import Coming_soon from "./pages/coming_soon";
 import Driver_update from "./pages/driver/driver_update";
 import Show_Search_Trip from "./pages/trips/show_search_trip";
 import Show_count_payment from "./pages/trips/show_count_payment";
@@ -39,12 +37,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             {/* <Route path="/home" element={<Home />} /> */}
-
-            <Route path="/success" element={<Success />} />
+{/* 
             <Route path="/failed">
               <Route path="" element={<Failed />} />
               <Route path=":id?/:id2?" element={<Failed />} />
-            </Route>
+            </Route> */}
 
             <Route path="/bus_home">
               <Route path="" element={<Bus_home />} />
@@ -97,7 +94,7 @@ function App() {
             </Route>
 
             <Route path="/about_us" element={<About_us />} />
-            <Route path="/coming_soon" element={<Coming_soon />} />
+            {/* <Route path="/coming_soon" element={<Coming_soon />} /> */}
           </Routes>
         </BrowserRouter>
       </div>

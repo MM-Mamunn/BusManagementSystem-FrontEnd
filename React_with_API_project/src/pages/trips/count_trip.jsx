@@ -3,7 +3,6 @@ import Header from "../../components/nav";
 import axios from "axios";
 import "../CSS/main.css";
 import { useEffect, useState } from "react";
-import Tripheader from "../../components/trip_nav";
 import Footer from "../../components/footer";
 
 import { Button } from "@/components/ui/button";

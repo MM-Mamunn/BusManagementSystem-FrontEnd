@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import Header from "../../components/nav";
-import Tripheader from "../../components/trip_nav";
 import Footer from "../../components/footer";
 
 import { Button } from "@/components/ui/button";

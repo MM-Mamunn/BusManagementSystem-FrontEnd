@@ -1,7 +1,6 @@
 import Header from "../../components/nav";
 import "../CSS/drivers_home.css";
 import Footer from "../../components/footer";
-import Tripheader from "../../components/trip_nav";
 import Trip_side from "../sides/trip_side";
 import Side from "../sides/side";
 function Trip_home() {

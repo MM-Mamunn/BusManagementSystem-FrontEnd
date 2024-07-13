@@ -8,6 +8,7 @@
     /* border:5px solid black; */
    margin:auto;
    justify-content: space-between;
+   background-color: rgb(51, 44, 91); 
 
 }
 .box{
@@ -19,7 +20,8 @@
     background-color: rgb(39, 33, 80);
 }
 .bx2{
-    width:68vw;   
+    width:68vw;  
+   
 }
 .bx3{
     width:15vw;

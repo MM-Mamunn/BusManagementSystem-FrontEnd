@@ -2,8 +2,6 @@ import Header from "../../components/nav";
 import Footer from "../../components/footer";
 ("use client");
 
-import { Checkbox } from "@/components/ui/checkbox";
-import { Link } from "react-router-dom";
 import Side from "../sides/side";
 import Bus_side from "../sides/bus_side";
 
