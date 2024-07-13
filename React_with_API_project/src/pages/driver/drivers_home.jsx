@@ -1,4 +1,4 @@
-import "../CSS/drivers_home.css";
+
 import Header from "../../components/nav";
 import Footer from "../../components/footer";
 import Driver_side from "../sides/driver_side";

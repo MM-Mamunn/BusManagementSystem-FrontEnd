@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import driverImage from "../pages/image/bus3.png";
 
 export default function Header() {
   return (
@@ -13,7 +12,7 @@ export default function Header() {
           </a>
         </div>
         <div className="flex-none">
-          <ul style={{ color: "grey" }} className="menu menu-horizontal px-2">
+          <ul style={{ color: "grey", paddingLeft:"43vw" }} className="menu menu-horizontal px-2">
             <li  style={{margin:"6px" }}>
               <NavLink
                 to="/"

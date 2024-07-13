@@ -1,5 +1,4 @@
 import Header from "../../components/nav";
-import "../CSS/drivers_home.css";
 import Footer from "../../components/footer";
 import Side from "../sides/side";
 import Maintanance_side from "../sides/maintanance_side";

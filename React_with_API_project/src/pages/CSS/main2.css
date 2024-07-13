@@ -11,6 +11,11 @@
    background-color: rgb(51, 44, 91); 
 
 }
+
+#root{
+    padding:0px;
+    margin:0px;
+}
 .box{
     /* border:1px solid black; */
     margin:1px;
