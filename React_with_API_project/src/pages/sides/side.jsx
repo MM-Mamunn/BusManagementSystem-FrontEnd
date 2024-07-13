@@ -4,7 +4,7 @@ function Side() {
   return (
     <>
         
-      <Link to="/home">
+      <Link to="/">
       <summary  className="side" style={{listStyle:"none",margin:"5px",height:"30px"}}>
       Home
         </summary>
@@ -40,17 +40,20 @@ function Side() {
             Drivers
         </summary>
         <ul id="trip_side2" style={{ width: "220px" }}>
-          <li className="  px-4 py-2 rounded m-4 ">
-            <Link to="/drivers_home/driver_insert">Insert Driver</Link>
-          </li>
           <li className="  px-4 py-2 rounded m-4  ">
             <Link to="/drivers_home/driver_view">Show All Driver</Link>
+          </li>
+          <li className="  px-4 py-2 rounded m-4 ">
+            <Link to="/drivers_home/driver_insert">Insert Driver</Link>
           </li>
           <li className="  px-4 py-2 rounded m-4 ">
             <Link to="/drivers_home/driver_update">Update Driver</Link>
           </li>
           <li className="  px-4 py-2 rounded m-4 ">
             <Link to="/drivers_home/search_driver">Search Driver</Link>
+          </li>
+          <li className="  px-4 py-2 rounded m-4 ">
+            <Link to="/drivers_home/total_distance">Total distance </Link>
           </li>
         </ul>
       </details>
@@ -61,16 +64,16 @@ function Side() {
         </summary>
         <ul id="trip_side2" style={{ width: "220px" }}>
           <li className="  px-4 py-2 rounded m-4 ">
-            <Link to="/drivers_home/driver_insert">Insert Driver</Link>
+            <Link to="/bus_home/bus_view">Show All buses</Link>
           </li>
           <li className="  px-4 py-2 rounded m-4  ">
-            <Link to="/drivers_home/driver_view">Show All Driver</Link>
+            <Link to="/bus_home/bus_delete">Delete bus</Link>
           </li>
           <li className="  px-4 py-2 rounded m-4 ">
-            <Link to="/drivers_home/driver_update">Update Driver</Link>
+            <Link to="/bus_home/oil_countt">Count Consumed Oil</Link>
           </li>
           <li className="  px-4 py-2 rounded m-4 ">
-            <Link to="/drivers_home/search_driver">Search Driver</Link>
+            <Link to="/bus_home/bus_update">Update bus</Link>
           </li>
         </ul>
       </details>
@@ -81,17 +84,9 @@ function Side() {
         </summary>
         <ul id="trip_side2" style={{ width: "220px" }}>
           <li className="  px-4 py-2 rounded m-4 ">
-            <Link to="/drivers_home/driver_insert">Insert Driver</Link>
+            <Link to="/maintanance/maintanance_view">Show All Maintances</Link>
           </li>
-          <li className="  px-4 py-2 rounded m-4  ">
-            <Link to="/drivers_home/driver_view">Show All Driver</Link>
-          </li>
-          <li className="  px-4 py-2 rounded m-4 ">
-            <Link to="/coming_soon">Update Driver</Link>
-          </li>
-          <li className="  px-4 py-2 rounded m-4 ">
-            <Link to="/drivers_home/search_driver">Search Driver</Link>
-          </li>
+         
         </ul>
       </details>
     </>

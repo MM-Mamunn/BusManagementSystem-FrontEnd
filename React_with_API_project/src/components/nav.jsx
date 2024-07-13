@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import driverImage from "../pages/image/bus3.png";
 
 export default function Header() {
@@ -16,7 +16,7 @@ export default function Header() {
           <ul style={{ color: "grey" }} className="menu menu-horizontal px-2">
             <li  style={{margin:"6px" }}>
               <NavLink
-                to="/home"
+                to="/"
                 className={({ isActive }) =>
                   isActive
                     ? "text-white bg-blue-300 mt-1 mb-1  rounded  p-2   font-bold"
@@ -91,7 +91,7 @@ export default function Header() {
             </li>
             <li style={{ margin:"6px" }}>
               <NavLink
-                to="/coming_soon"
+                to="/maintanance"
                 className={({ isActive }) =>
                   isActive
                     ? "text-white bg-blue-300 mt-1 mb-1  rounded  p-2   font-bold"
@@ -108,13 +108,13 @@ export default function Header() {
             </li>
             <li>
               <details>
-                <summary>Parent</summary>
+                <summary>About Us</summary>
                 <ul className="bg-base-100 rounded-t-none p-2">
                   <li>
-                    <a>Link 1</a>
+                    <Link to = {"/about_us"}>About Us</Link>
                   </li>
                   <li>
-                    <a>Link 2</a>
+                    <Link to = {"/about_us"}>About Us</Link>
                   </li>
                 </ul>
               </details>

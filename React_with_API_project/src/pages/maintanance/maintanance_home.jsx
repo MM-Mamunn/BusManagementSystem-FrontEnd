@@ -1,13 +1,9 @@
 import Header from "../../components/nav";
+import "../CSS/drivers_home.css";
 import Footer from "../../components/footer";
-("use client");
-
-import { Checkbox } from "@/components/ui/checkbox";
-import { Link } from "react-router-dom";
 import Side from "../sides/side";
-import Bus_side from "../sides/bus_side";
-
-function Bus_home() {
+import Maintanance_side from "../sides/maintanance_side";
+function Maintanance_home() {
   return (
     <>
       <Header />
@@ -21,14 +17,14 @@ function Bus_home() {
             <div className="min-h-screen flex flex-col items-center justify-center ">
               <h1 className="text-3xl font-bold text-center mb-8 text-white animate-bounce">
                 <u className="no-underline inline-block animation fadeInOut">
-                  Manage your Buses
+                  Manage your trips
                 </u>
               </h1>
               <p className="text-xl mb-12 text-center">
-                Complete Solution for Maintaining Your Buses
+                Complete Solution for Maintaining Your Trips
               </p>
 
-              {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-4xl">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-4xl">
                 <a
                   href="/trips_home"
                   className="bg-stone-300 rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300"
@@ -93,11 +89,11 @@ function Bus_home() {
                     Generate detailed reports for insights and decision making.
                   </p>
                 </a>
-              </div> */}
+              </div>
             </div>
           </div>
           <div className="bx3 box">
-            <Bus_side />
+        <Maintanance_side />
           </div>
         </div>
       </div>
@@ -108,4 +104,4 @@ function Bus_home() {
   );
 }
 
-export default Bus_home;
+export default Maintanance_home;

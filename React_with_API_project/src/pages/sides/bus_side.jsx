@@ -17,7 +17,7 @@ function Bus_side() {
                     : ""
                 }
               >
-     All Buses
+     Show All Buses
               </NavLink>
   </li>
   <li className="  px-4 py-1 rounded m-4 ">
@@ -44,7 +44,7 @@ function Bus_side() {
       Count Consumed Oil
               </NavLink>
   </li>
-  <li className="  px-1 py-1 rounded m-4 ">
+  {/* <li className="  px-1 py-1 rounded m-4 ">
   <NavLink
                 to="/bus_home/total_distance"
                 className={({ isActive }) =>
@@ -55,10 +55,10 @@ function Bus_side() {
               >
       Count distance
               </NavLink>
-  </li>
+  </li> */}
   <li className="  px-4 py-1 rounded m-4 ">
   <NavLink
-                to="/coming_soon"
+                to="/bus_home/bus_update"
                 className={({ isActive }) =>
                   isActive
                     ? "text-white bg-blue-300 mt-1 mb-1  rounded  p-2   font-bold"

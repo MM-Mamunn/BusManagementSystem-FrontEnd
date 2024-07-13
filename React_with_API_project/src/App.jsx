@@ -13,7 +13,6 @@ import Search_trip from "./pages/trips/search_trip";
 import Trip_all from "./pages/trips/trip_all";
 import Count_trip from "./pages/trips/count_trip";
 import About_us from "./pages/about_us";
-import Bus_distance from "./pages/bus_distance";
 import Bus_delete from "./pages/bus/bus_delete";
 import Coming_soon from "./pages/coming_soon";
 import Driver_update from "./pages/driver/driver_update";
@@ -26,7 +25,11 @@ import Oil_countt from "./pages/bus/oil_countt";
 import Bus_home from "./pages/bus/bus_home";
 import Search_driver from "./pages/driver/search_driver";
 import Show_search_driver from "./pages/driver/show_search_driver";
-
+import Total_distance from "./pages/driver/total_distance";
+import Total_distancee from "./pages/driver/total_distancee";
+import Bus_update from "./pages/bus/bus_update";
+import Maintanance_home from "./pages/maintanance/maintanance_home";
+import Maintanance_view from "./pages/maintanance/maintanance_view";
 //import  './driver_insert.jsx';
 function App() {
   return (
@@ -35,10 +38,9 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
+            {/* <Route path="/home" element={<Home />} /> */}
 
             <Route path="/success" element={<Success />} />
-
             <Route path="/failed">
               <Route path="" element={<Failed />} />
               <Route path=":id?/:id2?" element={<Failed />} />
@@ -51,8 +53,9 @@ function App() {
                 <Route path=":id1?/:id2?" element={<Oil_count />} />
               </Route>
               <Route path="bus_view" element={<Bus_view />} />
-              <Route path="total_distance" element={<Bus_distance />} />
+              {/* <Route path="total_distance" element={<Bus_distance />} /> */}
               <Route path="bus_delete" element={<Bus_delete />} />
+              <Route path="bus_update" element={<Bus_update />} />
             </Route>
 
             <Route path="/drivers_home">
@@ -63,6 +66,10 @@ function App() {
               <Route path="search_driver">
                 <Route path="" element={<Search_driver />} />
                 <Route path=":id" element={<Show_search_driver />} />
+              </Route>
+              <Route path="total_distance">
+                <Route path="" element={<Total_distance />} />
+                <Route path=":id1?/:id2?" element={<Total_distancee />} />
               </Route>
             </Route>
 
@@ -84,7 +91,11 @@ function App() {
               <Route path="trip_all" element={<Trip_all />} />
             </Route>
 
-            <Route path="/bus_home" element={<Bus_home />} />
+            <Route path="/maintanance">
+              <Route path=""  element={<Maintanance_home />} />
+          <Route path="maintanance_view" element={<Maintanance_view />} />
+            </Route>
+
             <Route path="/about_us" element={<About_us />} />
             <Route path="/coming_soon" element={<Coming_soon />} />
           </Routes>
