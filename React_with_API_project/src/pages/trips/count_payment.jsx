@@ -1,29 +1,22 @@
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 import Header from "../../components/nav";
 import "../CSS/main.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../../components/footer";
 
 import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+
 import Side from "../sides/side";
 import Trip_side from "../sides/trip_side";
+import axios from "axios";
 
 function Count_payment() {
   const navigate = useNavigate();
@@ -31,9 +24,27 @@ function Count_payment() {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
-    navigate(`/trips_home/payment/${data.driver_id}`);
+    for(let i = 0 ; i < drivers.length;i++) {
+      if(drivers[i].driver_id == data.driver_id) {
+        navigate(`/trips_home/payment/${data.driver_id}`);
+        return;
+      }
+    }
+    alert(`Driver with "${data.driver_id}" does not exist.Select Correct Driver id`);
   };
-
+  const [drivers, setdrivers] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:8000/api/driver_view?limit=1000")
+      .then((res) => {
+        setdrivers(res?.data?.data?.users);
+        // console.log(res);
+        // console.log(drivers);
+      })
+      .catch((error) => {
+        alert("An error occured")
+      });
+  }, []);
   return (
     <>
       <Header />

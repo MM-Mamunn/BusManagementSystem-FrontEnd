@@ -26,7 +26,7 @@ function Show_search_driver() {
           //  navigate(`/failed/${1}/${8}`);
         })
         .catch((error) => {
-          alert("Error occuredd ");
+          alert("Error occured ");
           // navigate("/failed");
         });
   }, [id]);
