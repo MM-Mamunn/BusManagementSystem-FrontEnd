@@ -22,7 +22,7 @@ Install vite by the command
 Or
 ```
 npm install vite
-‘’’
+```
 Now,run the "Final_project" project to localhost by the 
 ```
 command "npm run dev
