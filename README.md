@@ -1,6 +1,6 @@
 Set up:
 
-This is an enhanced version of  [Link Text]( https://github.com/MM-Mamunn/React_with_API_project)
+This is an enhanced version of  [Bus Management]( https://github.com/MM-Mamunn/React_with_API_project)
 
 There are two completely separate projects working together.
 "API(Database_part)" is a database project where database and relations are created via pgSQL and connected through API by using django.
@@ -13,7 +13,7 @@ git clone <repository_url>
 cd Database-React_with_API_projectv2.0
 ```
 
-install node modules in final project from [Link Text](https://nodejs.org/en/download/package-manager)
+install node modules in final project from [Node JS](https://nodejs.org/en/download/package-manager)
 Install vite by the command
 ```
  npm i
