@@ -23,9 +23,9 @@ Or
 ```
 npm install vite
 ```
-Now,run the "Final_project" project to localhost by the 
+Now,run the "Final_project" project to localhost by the command 
 ```
-command "npm run dev
+npm run dev
 ```
 you're ready to use the.
 
