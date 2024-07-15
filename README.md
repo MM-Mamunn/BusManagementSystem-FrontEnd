@@ -1,3 +1,5 @@
+It is web app named "Bus Management System". That ensures all the facilities for an admin of a bus company.
+
 Set up:
 
 This is an enhanced version of  [Bus Management]( https://github.com/MM-Mamunn/React_with_API_project)
@@ -29,5 +31,5 @@ npm run dev
 ```
 you're ready to use the.
 
-Need : pgAdmin,Django,React-vite,node.js 
+Need : [pgAdmin](https://www.pgadmin.org/download/),[Django-rest-framework](https://www.django-rest-framework.org/),[React-vite](https://vitejs.dev/guide/),[nodejs](https://nodejs.org/en/download/package-manager) 
 
