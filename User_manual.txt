@@ -1,18 +1,32 @@
-This is an enhanced version of https://github.com/MM-Mamunn/React_with_API_project
+Set up:
 
-There are two complete separate project working together.
+This is an enhanced version of  [Link Text]( https://github.com/MM-Mamunn/React_with_API_project)
+
+There are two completely separate projects working together.
 "API(Database_part)" is a database project where database and relations are created via pgSQL and connected through API by using django.
 "Final_project" is a react project interacting as front_end with the API.
 
 Guide:
-Create the tables and the necessary functions marked in ERD and the doc file using the sql code given in the "API(Database_part)".
-Now run this API(Database_part) project to localhost by the command "py manage.py runserver"
+Clone this React Project by the command
+```
+git clone <repository_url>
+cd Database-React_with_API_projectv2.0
+``
 
-or rename the "database_copy" to "database_copy.sql",then restore the database to your pgadmin from "database_copy".
-
-install node modules in final project
-Now,run the "Final_project" project to localhost by the command "npm run dev"
-
+install node modules in final project from [Link Text](https://nodejs.org/en/download/package-manager)
+Install vite by the command
+```
+ npm i
+``` 
+Or
+```
+npm install vite
+‘’’
+Now,run the "Final_project" project to localhost by the 
+```
+command "npm run dev
+```
 you're ready to use the.
 
 Need : pgAdmin,Django,React-vite,node.js 
+
