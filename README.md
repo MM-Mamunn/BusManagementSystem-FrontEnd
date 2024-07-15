@@ -25,7 +25,7 @@ Or
 ```
 npm install vite
 ```
-Now,run the "Final_project" project to localhost by the command 
+Now,run the **React_with_API-project** project to localhost by the command 
 ```
 npm run dev
 ```
