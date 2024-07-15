@@ -9,14 +9,14 @@ There are two completely separate projects working together.
 This backend (Database and API) part of the project is [here](https://github.com/MM-Mamunn/Database-React_with_API_projectv2.0).  
 ## This [React_with_API-project](https://github.com/MM-Mamunn/React_with_API_project_v2.0/tree/main/React_with_API_project) is a react project interacting as front_end with the [API](https://github.com/MM-Mamunn/Database-React_with_API_projectv2.0)
 
-Guide:
+**Guide**:
 Clone this React Project by the command
 ```
 git clone <repository_url>
 cd Database-React_with_API_projectv2.0
 ```
 
-install node modules in final project from [Node JS](https://nodejs.org/en/download/package-manager)
+install node modules in this project from [Node JS](https://nodejs.org/en/download/package-manager)
 Install vite by the command
 ```
  npm i
