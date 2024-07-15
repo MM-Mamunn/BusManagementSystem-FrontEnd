@@ -1,6 +1,6 @@
-It is web app named "Bus Management System". That ensures all the facilities for an admin of a bus company.
+# It is a web app named **Bus Management System** That ensures all the facilities for an admin of a bus company.
 
-Set up:
+## Set up:
 
 This is an enhanced version of  [Bus Management]( https://github.com/MM-Mamunn/React_with_API_project)
 
