@@ -51,9 +51,11 @@
     border:1px solid black;
     margin: 0;
     background-color: rgba(45, 45, 92, 0.747);
+    
 }
 #trip_side2{
     box-shadow: 2px 2px 6px rgb(0, 0, 87);
+    
 }
 
 .having{
@@ -63,3 +65,18 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+/* @keyframes name{
+    from{
+    transform: scaleY(1);
+    }
+    
+    to{
+    transform: scaleY(5);
+    }
+    
+    }
+details {
+    animation: name 2s ease-in-out 1s infinite;
+} */
+

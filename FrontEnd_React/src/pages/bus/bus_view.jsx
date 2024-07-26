@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import Side from "../sides/side";
 import dImage from "../image/bus2.png";
 import Bus_side from "../sides/bus_side";
+import { Link } from "react-router-dom";
 
 function Bus_view() {
   const [bus, setdrivers] = useState([]);
@@ -105,6 +106,14 @@ function Bus_view() {
                     <span class="text-sm text-gray-500 dark:text-gray-400">
                       Capacity: {iterate?.seats}
                     </span>
+                    <Link to={`/maintanance/search_maintanance/${iterate?.bus_id}`}>
+                        <div
+                          style={{ marginRight: "2px", width: "130px", marginTop:"3px" }}
+                          class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        >
+                          Maintanance
+                        </div>
+                      </Link>
                     {/* <div class="flex mt-4 md:mt-6">
                       <Link to={`/trips_home/count_trip/${iterate?.driver_id}`}>
                         <div

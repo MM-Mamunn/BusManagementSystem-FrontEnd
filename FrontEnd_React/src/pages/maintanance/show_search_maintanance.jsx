@@ -6,15 +6,20 @@ import { useEffect } from "react";
 import Footer from "../../components/footer";
 import Side from "../sides/side";
 import Maintanance_side from "../sides/maintanance_side";
+import { useParams } from "react-router-dom";
 
-function Maintanance_view() {
-  const [maintanance, setdrivers] = useState([]);
+function Show_search_maintanance() {
+  const [mnt, setdrivers] = useState([]);
+  const { id } = useParams();
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/maintanance_view?limit=1000")
+      .get(`http://127.0.0.1:8000/api/search_maintanance?bus_id=${id}&limit=1000`)
       .then((res) => {
+        if(res?.data?.data?.users)
         setdrivers(res?.data?.data?.users);
-        console.log(res);
+      else 
+      alert(`No maintanance record for bus id ${id}`)
+        // console.log(res);
       })
       .catch((error) => {
         console.log(error);
@@ -56,9 +61,8 @@ function Maintanance_view() {
                   </tr>
                 </thead>
                 <tbody>
-                  {/* row 1 */}
-                  {maintanance?.map((iterate) => (
-                    <tr >
+                {mnt?.map((iterate, i) => (
+                  <tr key={i}>
                       <td>
                         <div className="flex items-center gap-3">
                           <div className="avatar">
@@ -123,4 +127,4 @@ function Maintanance_view() {
   );
 }
 
-export default Maintanance_view;
+export default Show_search_maintanance;

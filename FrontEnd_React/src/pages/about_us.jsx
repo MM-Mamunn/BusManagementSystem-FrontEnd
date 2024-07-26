@@ -11,8 +11,8 @@ function About_us() {
   return (
     <>
      <Header/>
-     <body style = {{minHeight:"100vh"}} class="bg-blue-100 min-h-screen flex flex-col items-center justify-center p-4"> 
-    <h1 class="text-4xl font-bold mb-8"><u>About Us</u></h1> 
+     <body style = {{minHeight:"100vh",backgroundColor:"rgb(39, 33, 80)"}} class="bg-blue-100 min-h-screen flex flex-col items-center justify-center p-4"> 
+    <h1 class="text-4xl font-bold mb-8"><u style={{color:"white"}}>About Us</u></h1> 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 w-full max-w-4xl"> 
  
         <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center"> 

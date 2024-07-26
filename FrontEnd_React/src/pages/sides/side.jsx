@@ -75,6 +75,21 @@ function Side() {
           <li className="  px-4 py-2 rounded m-4 ">
             <Link to="/bus_home/bus_update">Update bus</Link>
           </li>
+          <li className="  px-4 py-2 rounded m-4 ">
+            <Link to="/bus_home/efficiency">Efficiency</Link>
+          </li>
+        </ul>
+      </details>
+    {/* Routes  */}
+      <details style={{ margin: "5px" }}>
+        <summary className="side" style={{height:"30px"}}>
+            Routes
+        </summary>
+        <ul id="trip_side2" style={{ width: "220px" }}>
+          <li className="  px-4 py-2 rounded m-4 ">
+            <Link to="/route/route_view">Show All Route</Link>
+          </li>
+         
         </ul>
       </details>
     {/* Maintanance  */}

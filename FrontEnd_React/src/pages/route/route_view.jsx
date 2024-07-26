@@ -1,3 +1,4 @@
+
 import axios from "axios";
 import Header from "../../components/nav";
 import "../CSS/main2.css";
@@ -5,13 +6,12 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Footer from "../../components/footer";
 import Side from "../sides/side";
-import Maintanance_side from "../sides/maintanance_side";
-
-function Maintanance_view() {
-  const [maintanance, setdrivers] = useState([]);
+import Route_side from "../sides/route_side";
+function Route_view() {
+  const [routes, setdrivers] = useState([]);
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/maintanance_view?limit=1000")
+      .get("http://127.0.0.1:8000/api/route_view?limit=1000")
       .then((res) => {
         setdrivers(res?.data?.data?.users);
         console.log(res);
@@ -22,7 +22,7 @@ function Maintanance_view() {
   }, []);
   return (
     <>
-       <Header />
+      <Header />
       <div className="mainn " style={{ backgroundColor: "#2f2b51" }}>
         <div className="containerr">
           <div className="bx1 box">
@@ -33,7 +33,7 @@ function Maintanance_view() {
               style={{ marginLeft: "450px" }}
               className="mt-2 btn btn-active"
             >
-              All Trips
+              All Routes
             </button>
             <div className="overflow-x-auto">
               <table
@@ -47,18 +47,14 @@ function Maintanance_view() {
                 {/* head */}
                 <thead>
                   <tr>
-                    <th>Driver ID </th>
-                    <th>Bus Id</th>
-                    <th>Issue</th>
-                    <th>Issue Date</th>
-                    <th>Estimated Cost</th>
-                    <th>Status</th>
+                    <th>Route name</th>
+                    <th>Distance</th>
                   </tr>
                 </thead>
                 <tbody>
                   {/* row 1 */}
-                  {maintanance?.map((iterate) => (
-                    <tr >
+                  {routes?.map((iterate) => (
+                    <tr key={iterate?.bus_id}>
                       <td>
                         <div className="flex items-center gap-3">
                           <div className="avatar">
@@ -70,35 +66,14 @@ function Maintanance_view() {
                             </div>
                           </div>
                           <div>
-                            <div className="font-bold">{iterate?.driver_id}</div>
+                            <div className="font-bold">{iterate?.route_name}</div>
                             <div className="text-sm opacity-50">
                               {/* {iterate?.license_no} */}
                             </div>
                           </div>
                         </div>
                       </td>
-                      <td>{iterate?.bus_id}</td>
-                      <td>
-                        {iterate?.issue}
-                        <br />
-                        {/* <span className="badge badge-ghost badge-sm">
-                      </span> */}
-                      </td>
-                      <th>
-                        <button className="btn btn-ghost btn-xs">
-                          {iterate?.issue_date}
-                        </button>
-                      </th>
-                      <th>
-                        <button className="btn btn-ghost btn-xs">
-                          {iterate?.estimated_cost}
-                        </button>
-                      </th>
-                      <th>
-                        <button className="btn btn-ghost btn-xs">
-                          {iterate?.solved_status}
-                        </button>
-                      </th>
+                      <td>{iterate?.distance}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -112,8 +87,8 @@ function Maintanance_view() {
           </div>
           <div className="bx3 box">
             {" "}
-            <Maintanance_side />
-            </div>
+            <Route_side />
+          </div>
         </div>
       </div>
       <footer style={{ position: "sticky", top: "100vh", width: "100vw" }}>
@@ -123,4 +98,4 @@ function Maintanance_view() {
   );
 }
 
-export default Maintanance_view;
+export default Route_view;

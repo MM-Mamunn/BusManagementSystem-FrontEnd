@@ -1,18 +1,20 @@
 import axios from "axios";
 import Header from "../../components/nav";
-import "../CSS/main2.css";
+import Footer from "../../components/footer";
 import { useState } from "react";
 import { useEffect } from "react";
-import Footer from "../../components/footer";
 import Side from "../sides/side";
-import Maintanance_side from "../sides/maintanance_side";
+import dImage from "../image/bus2.png";
+import Bus_side from "../sides/bus_side";
+import { Link, useParams } from "react-router-dom";
 
-function Maintanance_view() {
-  const [maintanance, setdrivers] = useState([]);
+function Efficiency() {
+  const [bus, setdrivers] = useState([]);
+  const { id } = useParams();
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/maintanance_view?limit=1000")
-      .then((res) => {
+    .get(`http://127.0.0.1:8000/api/efficiency?oil=${id}&limit=1000`)
+    .then((res) => {
         setdrivers(res?.data?.data?.users);
         console.log(res);
       })
@@ -22,7 +24,7 @@ function Maintanance_view() {
   }, []);
   return (
     <>
-       <Header />
+      <Header />
       <div className="mainn " style={{ backgroundColor: "#2f2b51" }}>
         <div className="containerr">
           <div className="bx1 box">
@@ -33,8 +35,27 @@ function Maintanance_view() {
               style={{ marginLeft: "450px" }}
               className="mt-2 btn btn-active"
             >
-              All Trips
+             Efficiency
             </button>
+
+
+            <div style = {{width:"200vw",marginLeft: "1vw",marginTop: "5px",marginBottom: "5px"}}className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full ">
+                <div 
+                  className="bg-stone-300 rounded-lg shadow-md p-6 transform hover:scale-105 transition-transform duration-300"
+                >
+                  <h2 style={{color:"#161674"}} className="text-2xl font-semibold mb-4">
+                    How it calculates?
+                  </h2>
+                  <p>
+                   Efficiency means cost per passenger to travel per Kilometer.<br></br>
+                   Efficiency = ((maintanance cost + oil cost)/ totall passengers) / (Average distance traveled by per passenger) <br></br>
+                   Driver salary will be included.
+                  </p>
+                </div>
+                </div>
+
+
+
             <div className="overflow-x-auto">
               <table
                 style={{
@@ -47,18 +68,19 @@ function Maintanance_view() {
                 {/* head */}
                 <thead>
                   <tr>
-                    <th>Driver ID </th>
-                    <th>Bus Id</th>
-                    <th>Issue</th>
-                    <th>Issue Date</th>
-                    <th>Estimated Cost</th>
-                    <th>Status</th>
+                    <th>Bus ID And Trips</th>
+                    <th>Totall Cost</th>
+                    <th>Oil Cost</th>
+                    <th>Maintanance</th>
+                    <th>Totall Passengers</th>
+                    <th>Totall distance</th>
+                    <th>Efficiency</th>
                   </tr>
                 </thead>
                 <tbody>
                   {/* row 1 */}
-                  {maintanance?.map((iterate) => (
-                    <tr >
+                  {bus?.map((iterate) => (
+                    <tr key={iterate?.bus_id}>
                       <td>
                         <div className="flex items-center gap-3">
                           <div className="avatar">
@@ -70,33 +92,43 @@ function Maintanance_view() {
                             </div>
                           </div>
                           <div>
-                            <div className="font-bold">{iterate?.driver_id}</div>
+                            <div className="font-bold">{iterate?.bus_id}</div>
                             <div className="text-sm opacity-50">
-                              {/* {iterate?.license_no} */}
+                              Trips:{iterate?.cnt < 1 ? '0': iterate?.cnt}
                             </div>
                           </div>
                         </div>
                       </td>
-                      <td>{iterate?.bus_id}</td>
+                      <td>{iterate?.totall}(TK)</td>
                       <td>
-                        {iterate?.issue}
+                        {iterate?.c1}(TK)
+                        <br />
+                        {/* <span className="badge badge-ghost badge-sm">
+                      </span> */}
+                      </td>
+                      <td>
+                        {iterate?.c2}(TK)
                         <br />
                         {/* <span className="badge badge-ghost badge-sm">
                       </span> */}
                       </td>
                       <th>
                         <button className="btn btn-ghost btn-xs">
-                          {iterate?.issue_date}
+                          {/* {iterate?.eff} */}
+                           {iterate?.totall_seats < 1 ? '0': iterate?.totall_seats}
                         </button>
                       </th>
                       <th>
                         <button className="btn btn-ghost btn-xs">
-                          {iterate?.estimated_cost}
+                          {/* {iterate?.eff} */}
+                          { iterate?.dis2}(KM)
                         </button>
                       </th>
                       <th>
-                        <button className="btn btn-ghost btn-xs">
-                          {iterate?.solved_status}
+                        <button style={{color:"orange"}} className="btn btn-ghost btn-xs">
+                          {/* {iterate?.eff} */}
+                          { iterate?.eff >= 9999 ? 'Infinity' : 
+                          iterate?.totall == 0 && iterate?.cnt < 1 ? 'No data Yet' : iterate?.eff + '(TK)'}
                         </button>
                       </th>
                     </tr>
@@ -112,8 +144,8 @@ function Maintanance_view() {
           </div>
           <div className="bx3 box">
             {" "}
-            <Maintanance_side />
-            </div>
+            <Bus_side />
+          </div>
         </div>
       </div>
       <footer style={{ position: "sticky", top: "100vh", width: "100vw" }}>
@@ -123,4 +155,4 @@ function Maintanance_view() {
   );
 }
 
-export default Maintanance_view;
+export default Efficiency;

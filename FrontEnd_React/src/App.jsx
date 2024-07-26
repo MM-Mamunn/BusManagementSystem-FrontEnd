@@ -28,6 +28,12 @@ import Total_distancee from "./pages/driver/total_distancee";
 import Bus_update from "./pages/bus/bus_update";
 import Maintanance_home from "./pages/maintanance/maintanance_home";
 import Maintanance_view from "./pages/maintanance/maintanance_view";
+import Search_maintanance from "./pages/maintanance/search_maintanance";
+import Show_search_maintanance from "./pages/maintanance/show_search_maintanance";
+import Efficiency from "./pages/bus/efficiency";
+import Efficiency_oil from "./pages/bus/efficiency_oil";
+import Route_view from "./pages/route/route_view";
+import Route_home from "./pages/route/route_home";
 //import  './driver_insert.jsx';
 function App() {
   return (
@@ -37,7 +43,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             {/* <Route path="/home" element={<Home />} /> */}
-{/* 
+            {/* 
             <Route path="/failed">
               <Route path="" element={<Failed />} />
               <Route path=":id?/:id2?" element={<Failed />} />
@@ -53,6 +59,10 @@ function App() {
               {/* <Route path="total_distance" element={<Bus_distance />} /> */}
               <Route path="bus_delete" element={<Bus_delete />} />
               <Route path="bus_update" element={<Bus_update />} />
+              <Route path="efficiency">
+                <Route path="" element={<Efficiency_oil />} />
+                <Route path=":id?" element={<Efficiency />} />
+                </Route>
             </Route>
 
             <Route path="/drivers_home">
@@ -89,8 +99,17 @@ function App() {
             </Route>
 
             <Route path="/maintanance">
-              <Route path=""  element={<Maintanance_home />} />
-          <Route path="maintanance_view" element={<Maintanance_view />} />
+              <Route path="" element={<Maintanance_home />} />
+              <Route path="maintanance_view" element={<Maintanance_view />} />
+              <Route path="search_maintanance">
+                <Route path="" element={<Search_maintanance />} />
+                <Route path=":id" element={<Show_search_maintanance />} />
+              </Route>
+            </Route>
+
+            <Route path="route">
+              <Route path="" element={<Route_home />}/>
+              <Route path="route_view" element={<Route_view />}/>
             </Route>
 
             <Route path="/about_us" element={<About_us />} />
