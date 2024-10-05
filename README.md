@@ -1,4 +1,4 @@
-# It is a web app named **Bus Management System** That ensures all the facilities for an admin of a bus company.
+# This is a web app named **Bus Management System** That ensures all the facilities for an admin of a bus company.
 
 ## Set up:
 
